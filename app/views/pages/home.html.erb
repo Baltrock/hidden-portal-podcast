@@ -1,2 +1,10 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>The Hidden Portal Podcast</h1>
+<p>Welcome to 'The Hidden Portal Podcast' website. Please sign in to check on future plans for the podcast or to register as a guest. <br>
+the HPP podcast is designed for the explicit purpose of story-building, character-craft and laying out the limitless possibilities of any story. <br>
+If you are building up to portraying a role in stage/screen, have questions about ways to present your novel/world or simply wish to indulge in the world of story-telling, <br>
+then please join me (Ben Murphy) on the Hidden Portal Podcast and let me help you with any artistic endevour you may be working on. </p>
+
+<div class="awesome">
+  <%= link_to "Join the Podcast", new_user_registration_path( status: { status:"user" }), class: "btn btn-pink text-black text-uppercase fw-bold", style: "color:black"%>
+  <%= link_to "For Da King", new_admin_registration_path( status: { status:"admin" }), class: "btn btn-pink text-black text-uppercase fw-bold", style: "color:black"%>
+</div>

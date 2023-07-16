@@ -1,1 +1,25 @@
 // Specific CSS for your home-page
+.above {
+  height: 200px;
+  background-color: #59CDA7;
+  display: flex;
+  justify-content: space-between;
+}
+
+.podcast-face {
+  height: 150px;
+  width: 300px;
+  justify-content: left;
+}
+
+.coolish {
+  display: flex;
+  justify-content: space-between;
+  display: flex;
+  width: fill;
+  margin: 20px;
+}
+
+.main-options {
+  justify-content: right;
+}
