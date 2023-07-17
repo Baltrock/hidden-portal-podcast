@@ -17,7 +17,7 @@ class PersonalitiesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create personality" do
     assert_difference("Personality.count") do
-      post personalities_url, params: { personality: { contact-number: @personality.contact-number, email: @personality.email, first-name: @personality.first-name, last-name: @personality.last-name } }
+      post personalities_url, params: { personality: { contact_number: @personality.contact_number, email: @personality.email, first_name: @personality.first_name, last_name: @personality.last_name } }
     end
 
     assert_redirected_to personality_url(Personality.last)
@@ -34,7 +34,7 @@ class PersonalitiesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update personality" do
-    patch personality_url(@personality), params: { personality: { contact-number: @personality.contact-number, email: @personality.email, first-name: @personality.first-name, last-name: @personality.last-name } }
+    patch personality_url(@personality), params: { personality: { contact_number: @personality.contact_number, email: @personality.email, first_name: @personality.first_name, last_name: @personality.last_name } }
     assert_redirected_to personality_url(@personality)
   end
 

@@ -14,10 +14,10 @@ class PersonalitiesTest < ApplicationSystemTestCase
     visit personalities_url
     click_on "New personality"
 
-    fill_in "Contact-number", with: @personality.contact-number
+    fill_in "Contact number", with: @personality.contact_number
     fill_in "Email", with: @personality.email
-    fill_in "First-name", with: @personality.first-name
-    fill_in "Last-name", with: @personality.last-name
+    fill_in "First name", with: @personality.first_name
+    fill_in "Last name", with: @personality.last_name
     click_on "Create Personality"
 
     assert_text "Personality was successfully created"
@@ -28,10 +28,10 @@ class PersonalitiesTest < ApplicationSystemTestCase
     visit personality_url(@personality)
     click_on "Edit this personality", match: :first
 
-    fill_in "Contact-number", with: @personality.contact-number
+    fill_in "Contact number", with: @personality.contact_number
     fill_in "Email", with: @personality.email
-    fill_in "First-name", with: @personality.first-name
-    fill_in "Last-name", with: @personality.last-name
+    fill_in "First name", with: @personality.first_name
+    fill_in "Last name", with: @personality.last_name
     click_on "Update Personality"
 
     assert_text "Personality was successfully updated"

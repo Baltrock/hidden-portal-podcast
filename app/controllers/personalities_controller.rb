@@ -25,8 +25,8 @@ class PersonalitiesController < ApplicationController
 
     respond_to do |format|
       if @personality.save
-        format.html { redirect_to personality_url(@personality), notice: "Personality was successfully created." }
-        format.json { render :show, status: :created, location: @personality }
+        format.html { redirect_to user_root_url(@primary), notice: "Profile was successfully created." }
+        format.json { render :primary, status: :created, location: @user_root }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @personality.errors, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class PersonalitiesController < ApplicationController
   def update
     respond_to do |format|
       if @personality.update(personality_params)
-        format.html { redirect_to personality_url(@personality), notice: "Personality was successfully updated." }
+        format.html { redirect_to personality_url(@personality), notice: "Profile was successfully updated." }
         format.json { render :show, status: :ok, location: @personality }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -65,6 +65,6 @@ class PersonalitiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def personality_params
-      params.require(:personality).permit(:first-name, :last-name, :email, :contact-number)
+      params.require(:personality).permit(:first_name, :last_name, :email, :contact_number)
     end
 end

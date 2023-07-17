@@ -10,8 +10,11 @@ Rails.application.routes.draw do
   post "/signup", to: "sessions#create"
   post "/login", to: "sessions#create"
   # get 'admin' => 'admin#primary', as: :admin_root
+  get '/personality' => 'personalities#index', as: :classified
+
   get 'users' => 'users#primary', as: :user_root
   get 'admins' => 'admin#primary', as: :admin_root
+  get 'podcasts' => 'users#bumper', as: :bumper
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

@@ -2,8 +2,13 @@
 <h4>On this site, you can keep an see when the next show will be out and which guests will be present. You can also critique and review podcasts.</h4>
 <h4>Please select from the variety of options below: </h4>
 
-<p>Podcast List</p>
-<p>Become a podcast guest</p>
-<p>Join Project Portal</p>
-<p>User information</p>
-<p>Access User Forum</p>
+<% if @personality == 0 %>
+  <%= link_to "Please fill in user information", new_personality_path %>
+<% end %>
+<% if personality = 1 %>
+  <%= link_to "Podcast List", bumper_path, class: "btn btn-pink text-black text-uppercase rounded-pill fw-bold size-larger" %>
+  <p>Become a podcast guest</p>
+  <p>Join Project Portal</p>
+  <%= link_to "Edit My Information", classified_path, class: "btn btn-pink text-black text-uppercase rounded-pill fw-bold size-larger" %>
+  <p>Access User Forum</p>
+<% end %>
