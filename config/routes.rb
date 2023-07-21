@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   resources :personalities
+  mount ForestLiana::Engine => '/forest'
   devise_for :admins
   devise_for :users
   root to: "pages#home"
-
+  # devise_for :users, controllers: {registrations: "users/registrations"}
   # devise_for :admins, controllers: {registrations: "admins/registrations"}
   # devise_for :users, controllers: {registrations: "users/registrations"}
   delete "/logout", to: "sessions#destroy"
